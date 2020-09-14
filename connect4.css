@@ -1,14 +1,18 @@
 /* game board table */
 
 body {
-  background: floralwhite;
+
+  background: hsla(218, 54%, 58%, 1);
+
+  background: linear-gradient(90deg, hsla(218, 54%, 58%, 0.5) 0%, hsla(219, 56%, 67%, 0.5) 34%, hsla(0, 69%, 68%, 0.5) 66.66666666666667%, hsla(56, 69%, 68%, 0.5) 100%);
+  
 }
 
 
 #board td {
   width: 50px;
   height: 50px;
-  border: solid 5px #07a0c3;
+  border: solid 5px #1348a2;
 }
 
 /* pieces are div within game table cells: draw as colored circles */
@@ -25,11 +29,11 @@ body {
 /*make pieces red/blue,  depending on player 1/2 piece */
 
 .piece.p1 {
-  background-color: #55a630;
+  background-color: #ff0000;
 }
 
 .piece.p2 {
-  background-color: #DD1C1A;
+  background-color: #fff000;
 }
 
 /* column-top is table row of clickable areas for each column */
@@ -53,11 +57,12 @@ body {
   margin-bottom: 30px;
   font-family: 'Ranchers', cursive;
   font-size: 1.6rem;
-  color: #07a0c3;
+  color: #1348a2;
 }
 
 div h2 {
   font-family: 'Ranchers', cursive;
+  color: #ff0000;
 }
 
 .rotate-scale-up {
