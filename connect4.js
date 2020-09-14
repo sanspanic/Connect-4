@@ -82,7 +82,10 @@ function placeInTable(y, x) {
 
 function endGame(msg) {
   // pop up alert message
-  alert(msg);
+  const resultDiv = document.querySelector('#result'); 
+  const h2 = document.createElement('h2'); 
+  h2.innerText = msg;
+  resultDiv.append(h2)
 }
 
 /** handleClick: handle click of column top to play piece */
