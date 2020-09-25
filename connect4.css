@@ -63,7 +63,17 @@ body {
 
 div h2 {
   font-family: 'Ranchers', cursive;
-  color: #ff0000;
+  color: black;
+}
+
+div h2.player-1 {
+  text-shadow: 2px 2px 5px red;
+  letter-spacing: 2px;
+}
+
+div h2.player-2 {
+  text-shadow: 2px 2px 5px #fff000;
+  letter-spacing: 2px;
 }
 
 .rotate-scale-up {
@@ -98,6 +108,70 @@ div h2 {
     -webkit-transform: scale(1) rotateZ(360deg);
             transform: scale(1) rotateZ(360deg);
   }
+}
+
+/* button css from codepen */
+
+.wrapper{
+  margin-top: 330px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.link_wrapper{
+  position: relative;
+}
+
+a{
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #333;
+  text-align: center;
+  color: #f8f5cf;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #333;
+  transition: all .35s;
+}
+
+.icon{
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: all .35s;
+}
+
+.icon svg{
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  fill: #1348a2;
+  transition: all .35s;
+}
+
+a:hover{
+  width: 200px;
+  border: 3px solid #1348a2;
+  background: transparent;
+  color: #1348a2;
+}
+
+a:hover + .icon{
+  border: 3px solid #1348a2;
+  right: -25%;
 }
 
 

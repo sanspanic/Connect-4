@@ -86,6 +86,11 @@ function endGame(msg) {
   const resultDiv = document.querySelector('#result'); 
   const h2 = document.createElement('h2'); 
   h2.innerText = msg;
+  if (msg === 'Player 1 won!') {
+    h2.classList.add('player-1');
+  } else if (msg === 'Player 2 won!') {
+    h2.classList.add('player-2');
+  }
   resultDiv.append(h2)
 }
 
@@ -158,6 +163,16 @@ function checkForWin() {
       }
     }
   }
+}
+
+//handle restart button click 
+let button = document.querySelector('.link_wrapper');
+button.addEventListener('click', function(){
+  restartGame();
+})
+
+function restartGame() {
+  location.reload();
 }
 
 makeBoard();
